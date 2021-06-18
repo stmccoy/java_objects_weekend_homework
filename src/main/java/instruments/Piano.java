@@ -1,5 +1,7 @@
 package instruments;
 
+import instruments.enums.PianoTypes;
+
 public class Piano extends Instrument {
 
     private PianoTypes pianoType;

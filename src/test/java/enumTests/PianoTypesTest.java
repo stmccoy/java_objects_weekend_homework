@@ -1,6 +1,6 @@
 package enumTests;
 
-import instruments.PianoTypes;
+import instruments.enums.PianoTypes;
 import org.junit.Before;
 import org.junit.Test;
 

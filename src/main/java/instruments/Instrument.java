@@ -8,10 +8,10 @@ public abstract class Instrument implements IPlay {
     private String colour;
     private String type;
 
-    public Instrument(String material, String colour, String type) {
+    public Instrument(String material, String colour, String instrumentType) {
         this.material = material;
         this.colour = colour;
-        this.type = type;
+        this.type = instrumentType;
     }
 
     public String getMaterial() {
@@ -22,7 +22,7 @@ public abstract class Instrument implements IPlay {
         return colour;
     }
 
-    public String getType() {
+    public String getInstrumentType() {
         return type;
     }
 

@@ -1,7 +1,7 @@
 package instrumentTests;
 
 import instruments.Piano;
-import instruments.PianoTypes;
+import instruments.enums.PianoTypes;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,8 +27,8 @@ public class PianoTest {
     }
 
     @Test
-    public void pianoHasType(){
-        assertEquals("Keys", piano.getType());
+    public void pianoHasInstrumentType(){
+        assertEquals("Keys", piano.getInstrumentType());
     }
 
     @Test
@@ -39,5 +39,11 @@ public class PianoTest {
     @Test
     public void pianoCanPlay(){
         assertEquals("Piano Noises", piano.play());
+    }
+
+    @Test
+    public void pianoCanChangeColour(){
+        piano.setColour("Red");
+        assertEquals("Red", piano.getColour());
     }
 }
