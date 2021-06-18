@@ -53,4 +53,14 @@ public class ShopTests {
         assertEquals(false, shop.getStock().contains(nonInstrumentItem));
     }
 
+    @Test
+    public void canCalculateTotalPotentialMarkup(){
+        djDeck = new DjDeck("Plastic", "Black", "Dj Deck", DjDeckType.TurnTables);
+        instrumentItem = new InstrumentItem(djDeck, 400, 600);
+        nonInstrumentItem = new NonInstrumentItem("Music Book", 10, 20);
+        shop.addStock(instrumentItem);
+        shop.addStock(nonInstrumentItem);
+        assertEquals(210, shop.calculateTotalPotentialMarkup(), 0.00);
+    }
+
 }
