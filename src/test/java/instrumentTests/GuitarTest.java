@@ -1,3 +1,5 @@
+package instrumentTests;
+
 import instruments.Guitar;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +33,11 @@ public class GuitarTest {
     @Test
     public void guitarHasNumberOfStrings(){
         assertEquals(6, guitar.getNumberOfStrings());
+    }
+
+    @Test
+    public void guitarCanPlaySounds(){
+        assertEquals("Guitar sounds", guitar.play());
     }
 
 }
